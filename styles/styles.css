@@ -1,0 +1,133 @@
+@import url("./globals.css");
+
+*{
+    font-family: "Quicksand",sans-serif;
+    font-size: 16px;
+    color: #fafafa;
+}
+
+html{
+    background-color: #201d1d;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 9rem;
+}
+
+nav ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav li{
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header h1{
+    position: absolute;
+    top: calc(50% - 3.5rem);
+    font-size: 3rem;
+    width: 90%;
+    left: 1rem;
+}
+
+.news{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    gap: 0.8rem;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+form div input[type="text"], [type="email"], [type="date"]{
+    flex-grow: 2;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    border-style: none;
+}
+
+#suscriptions-container{
+    flex-direction: row;
+}
+
+.options{
+    flex-direction: row;
+}
+
+.options button{
+    background-color: var(--nav-links);
+    padding: 0.5rem 0.8rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+}
+
+.options button:hover{
+    cursor: pointer;
+    transition: all 0.5s;
+    color: var(--bg-color-black);
+    background-color: var(--links-color-dark);
+}
+
+.options button[type="reset"]{
+    border-style: solid;
+    border-color: var(--nav-links);
+    border-width: 2px;
+    background-color: transparent;
+}
+
+.options button[type="reset"]:hover {
+    color: var(--text-color-dark);
+}
+
+form input,
+form select,
+form textarea {
+    color: var(--bg-color-black);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--bg-color-black);
+}
