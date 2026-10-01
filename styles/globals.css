@@ -6,7 +6,9 @@
     --links-color-dark: #EFBDEB;
     --links-color-hover: #8D91C7;
     --nav-links: #8D3FD1;
+    --nav-links-lighter: #9558C2;
     --highlight: #EDF67D;
+    --border-radius-buttons: 0.5rem;
 }
 
 a{

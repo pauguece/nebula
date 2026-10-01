@@ -10,11 +10,11 @@
 <header class="principal">
     <img src="./imgs/cover.jpg" alt="Cober Nébula, a series of albums on outer space">
     <h1>Tu música en la nube y en tu espacio.</h1>
-    <h2>Regístrate</h2>
 </header>
 
 <main>
-    <form action="/crear-cuenta" method="post">
+    <h2>Regístrate</h2>
+    <form action="http://localhost:8080/api/registro" method="get">
         <div>
             <label for="txt_nombre">Nombre:</label>
             <input id="txt_nombre" name="nombre" type="text" minlength="3" required placeholder="Escriba su nombre completo">

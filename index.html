@@ -9,8 +9,9 @@
 
 <nav>
     <a class="logo">
-        <img src="./imgs/nebula-03.svg" alt="Logo Nébula Music">
+        <button class="menu-button"><img src="./imgs/nebula-03.svg" alt="Logo Nébula Music"></button>
     </a>
+    <img src="./imgs/menu.png" alt="menu icon" class="menu-icon">
     <ul>
         <li>
             <a href="index.html">Inicio</a>
@@ -19,7 +20,7 @@
             <a href="about.html">Acerca de Nosotros</a>
         </li>
         <li>
-            <a href="iniciar_sesion.html">Iniciar Sesión</a>
+            <a href="iniciar-sesion.html">Iniciar Sesión</a>
         </li>
         <li>
             <a href="registro.html">Registro</a>
@@ -34,23 +35,42 @@
 
 <main>
     <h2>¡Entérate de todo!</h2>
-    <h2>Novedades de la semana</h2>
+    <h3>Novedades de la semana</h3>
     <section class="news">
-        <article>
-            <h3>Taylor lanza canción para Toy Story</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda at eaque earum excepturi, expedita explicabo laboriosam natus quibusdam tenetur voluptatem voluptatibus. Assumenda cupiditate debitis ea iusto laudantium magnam vitae?</p>
-        </article>
+        <details>
+            <summary>
+                <h4>Taylor lanza canción para Toy Story</h4>
+            </summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda at eaque earum excepturi,
+                expedita explicabo laboriosam natus quibusdam tenetur voluptatem voluptatibus. Assumenda cupiditate
+                debitis ea iusto laudantium magnam vitae?</p>
+        </details>
 
-        <article>
-            <h3>Shakira manda a una imitadora al mundial</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aut consequuntur cumque deserunt dolore dolorem doloribus eaque excepturi explicabo impedit, nam necessitatibus nemo nulla odit perferendis quasi reiciendis repellendus voluptatem?</p>
-        </article>
+        <details>
+            <summary>
+            <h4>Shakira manda a una imitadora al mundial</h4>
+            </summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aut consequuntur cumque deserunt dolore
+                dolorem doloribus eaque excepturi explicabo impedit, nam necessitatibus nemo nulla odit perferendis
+                quasi reiciendis repellendus voluptatem?</p>
+        </details>
 
-        <article>
-            <h3>Harry Styles se resbala en su segundo concierto en la CDMX</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet consequatur corporis esse, ipsum modi quis reiciendis? Aspernatur, beatae dicta eius error est iste nesciunt nobis optio, rerum similique voluptatibus.</p>
-        </article>
+        <details>
+            <summary>
+            <h4>Harry Styles se resbala en su segundo concierto en la CDMX</h4>
+            </summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet consequatur corporis esse, ipsum modi
+                quis reiciendis? Aspernatur, beatae dicta eius error est iste nesciunt nobis optio, rerum similique
+                voluptatibus.</p>
+        </details>
     </section>
+
+    <button id="abrir">Saluda</button>
+
+    <dialog id="modal">
+        <p>Hola desde mi modal! :)</p>
+        <button id="cerrar">Cerrar</button>
+    </dialog>
 
     <footer>
         <p>Copyright Nébula 2026.</p>
@@ -58,4 +78,20 @@
 </main>
 
 </body>
+
+<script>
+    const dialog = document.getElementById("modal");
+    const abrir = document.getElementById("abrir");
+    const cerrar = document.getElementById("cerrar");
+
+    abrir.addEventListener('click', ()=>{
+        dialog.showModal();
+    })
+
+    cerrar.addEventListener('click', ()=>{
+        dialog.close();
+    });
+
+</script>
+
 </html>
